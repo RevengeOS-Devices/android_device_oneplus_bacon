@@ -19,9 +19,16 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/bacon/bacon.mk)
 
 # Inherit from Potato vendor
-$(call inherit-product, vendor/potato/config/common_full_phone.mk)
+$(call inherit-product, vendor/revengeos/config/common.mk)
+$(call inherit-product, vendor/revengeos/config/gsm.mk)
 
-PRODUCT_NAME := potato_bacon
+IS_PHONE := true
+TARGET_GAPPS_ARCH := arm
+USE_GCAM := true
+TARGET_DENSITY := xxxhdpi
+TARGET_BOOT_ANIMATION_RES := 1080
+
+PRODUCT_NAME := revengeos_bacon
 PRODUCT_DEVICE := bacon
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_MODEL := A0001
